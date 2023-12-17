@@ -4,10 +4,22 @@ The purpose of this project is to provide a model that can distinguish between d
 
 ## Jupyter Notebook
 In order to explore the data in more depth we have created a Jupyter Notebook in order to run it do the following commands:
+
+### UNIX System (Linux and MacOS)
 ```bash
 cd jupyter_notebooks
 python -m venv ./venv
 source venv/bin/activate.sh
+pip install -r requirements.txt
+python -m ipykernel install --user --name=venv
+jupyter notebook ./
+```
+
+### Windows
+```bash
+cd jupyter_notebooks
+python -m venv ./venv
+.\venv\Scripts\Activate.bat
 pip install -r requirements.txt
 python -m ipykernel install --user --name=venv
 jupyter notebook ./
