@@ -1,0 +1,112 @@
+{
+	"config": [
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_backhand_01out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_backhand_01_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_backhand_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_backhand_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_backhand_02out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_backhand_02_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_backhand_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_backhand_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_backhand_03out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_backhand_03_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_backhand_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_backhand_03_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_backhand_01out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_backhand_01_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_backhand_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_backhand_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_backhand_02out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_backhand_02_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_backhand_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_backhand_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_backhand_03out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_backhand_03_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_backhand_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_backhand_03_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_forehand_flat_01out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_forehand_flat_01_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_forehand_flat_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_forehand_flat_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_forehand_flat_02out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_forehand_flat_02_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_forehand_flat_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_forehand_flat_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_forehand_flat_03out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_forehand_flat_03_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_forehand_flat_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_forehand_flat_03_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_forehand_flat_01out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_forehand_flat_01_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_forehand_flat_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_forehand_flat_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_forehand_flat_02out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_forehand_flat_02_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_forehand_flat_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_forehand_flat_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_forehand_flat_03out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_forehand_flat_03_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_forehand_flat_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_forehand_flat_03_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_service_flat_01out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_service_flat_01_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_service_flat_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_service_flat_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_service_flat_02out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_service_flat_02_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_service_flat_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_service_flat_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/yhu_service_flat_03out.pb",
+			"video_overlay_out_path": "./video_overlays/yhu_service_flat_03_overlay.mp4",
+			"video_path": "./data/test/videos/yhu_service_flat_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/yhu_service_flat_03_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_service_flat_01out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_service_flat_01_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_service_flat_01.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_service_flat_01_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_service_flat_02out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_service_flat_02_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_service_flat_02.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_service_flat_02_matplotlib.gif"
+		},
+		{
+			"track_data_file_path": "./data/test/track_data/guemah_service_flat_03out.pb",
+			"video_overlay_out_path": "./video_overlays/guemah_service_flat_03_overlay.mp4",
+			"video_path": "./data/test/videos/guemah_service_flat_03.MOV",
+			"matplotlib_gif_out_path": "./matplotlib_gifs/guemah_service_flat_03_matplotlib.gif"
+		}
+	]
+}
