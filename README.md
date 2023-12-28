@@ -32,3 +32,8 @@ jupyter notebook ./
 Next a Browser Tab should open. Then you can select the Jupyter Notebook of your choice.
 
 > Important: Please do not forget to select the installed `venv` as the kernel in order to utilize the installed virtual environment in the Jupyter Notebook.
+
+## Used Ressources
+|Ressource|Description|
+|---|------|
+|[Dynamic Time Warping Tutorial Series](https://www.youtube.com/watch?v=ERKDHZyZDwA)|An awesome YouTube Tutorial Series which explains Dynamic Time Warping in more Detail.|
