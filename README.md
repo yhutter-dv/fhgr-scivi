@@ -1,11 +1,10 @@
 # Tennis Move Recognizer
 The purpose of this project is to provide a model that can distinguish between different Tennis moves, henceforth the name `temovre` (Tennis Move Recognizer). The project was done in collaboration with the company Subsequent during the module Scientific Visuliazation @ FHGR.
 
-## Scripts
-The scripts are available under the `scripts` directory.
+## Explanation about Python Scripts
 |Script|Purpose|
 |---|------|
-|data_loading_and_processing.py|Generates GIF Files from Matplotlib as well as Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
+|create_gifs_and_video_overlays.py|Generates GIF Files from Matplotlib as well as Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
 
 ## Jupyter Notebook
 In order to explore the data in more depth we have created a Jupyter Notebook in order to run it do the following commands:
