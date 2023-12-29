@@ -33,6 +33,16 @@ Next a Browser Tab should open. Then you can select the Jupyter Notebook of your
 
 > Important: Please do not forget to select the installed `venv` as the kernel in order to utilize the installed virtual environment in the Jupyter Notebook.
 
+## Frontend
+The Frontend is build with the awesome [Deno Fresh Framework](https://fresh.deno.dev/). Therefore in order for things to work please make sure you have [Deno] (https://docs.deno.com/runtime/manual/getting_started/installation) installed.
+
+After that to start up the frontend simply run:
+
+```bash
+cd frontend
+deno task start
+```
+
 ## Used Ressources
 |Ressource|Description|
 |---|------|
