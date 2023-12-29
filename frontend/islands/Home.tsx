@@ -8,13 +8,15 @@ export function Home() {
     const predictionResult = useSignal<string>("");
 
     async function getPredicitonForPbFile(pbFile: File): Promise<string> {
-        return Math.random().toString();
 
-        // const formData = new FormData();
-        // formData.append("pbFile", pbFile);
-        // const response = await fetch('/upload/image', { method: "POST", body: formData });
-        // const prediction = response.json();
-        // console.log("Got the following prediction", prediction);
+        const formData = new FormData();
+        formData.append("file", pbFile);
+        const response = await fetch('http://localhost:6969/predict_movement', {
+            method: "POST",
+            body: formData
+        });
+        const prediction = response.json();
+        return JSON.stringify(prediction);
     }
 
     selectedPbFile.subscribe(async f => {

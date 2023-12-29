@@ -4,7 +4,7 @@ The purpose of this project is to provide a model that can distinguish between d
 ## Explanation about Python Scripts
 |Script|Purpose|
 |---|------|
-|create_gifs_and_video_overlays.py|Generates GIF Files from Matplotlib as well as Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
+|create_gifs_and_overlays.py|Generates GIF Files from Matplotlib as well as Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
 
 ## Jupyter Notebook
 In order to explore the data in more depth we have created a Jupyter Notebook in order to run it do the following commands:
@@ -41,6 +41,18 @@ After that to start up the frontend simply run:
 ```bash
 cd frontend
 deno task start
+```
+
+## Backend
+For the Frontend a simple Backend was implemented with [FastAPI](https://fastapi.tiangolo.com/). The Backend just has a single Endpoint. The purpose of this endpoint is to determine the correct Tennis Move given a `.pb` file which can be uploaded via the frontend.
+
+To start the backend simply run the following commands:
+
+```bash
+cd backend
+python -m venv ./venv
+source venv/bin/activate.sh
+uvicorn app:app --port 6969 --reload
 ```
 
 ## Used Ressources
