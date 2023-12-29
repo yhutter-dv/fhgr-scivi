@@ -5,7 +5,6 @@ export type GalleryElementProps = {
 
 export function GalleryElement({ title, gifs }: GalleryElementProps) {
     const gifPathsRelativeToStaticDir = gifs.map(f => f.replace("./static/", ""));
-    console.log(gifPathsRelativeToStaticDir);
     const gifElements = gifPathsRelativeToStaticDir.map(f => (
         <div class="rounded border">
             <img src={f} />

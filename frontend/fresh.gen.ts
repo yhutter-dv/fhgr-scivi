@@ -6,8 +6,9 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $gallery from "./routes/gallery.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $GalleryElement from "./islands/GalleryElement.tsx";
+import * as $FileUpload from "./islands/FileUpload.tsx";
 import * as $Header from "./islands/Header.tsx";
+import * as $Home from "./islands/Home.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -18,8 +19,9 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/GalleryElement.tsx": $GalleryElement,
+    "./islands/FileUpload.tsx": $FileUpload,
     "./islands/Header.tsx": $Header,
+    "./islands/Home.tsx": $Home,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

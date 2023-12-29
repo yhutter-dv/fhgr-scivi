@@ -1,4 +1,4 @@
-import { GalleryElement, GalleryElementProps } from "../islands/GalleryElement.tsx";
+import { GalleryElement, GalleryElementProps } from "../components/GalleryElement.tsx";
 import { Badge } from "../components/Badge.tsx";
 
 export default async function Gallery() {
