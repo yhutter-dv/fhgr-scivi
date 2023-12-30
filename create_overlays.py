@@ -55,8 +55,6 @@ def create_video_overlay(tracking_data, tracking_data_information, video_file_pa
 		cap.release()
 		out.release()
 
-
-
 if __name__ == "__main__":
 	feature_file_paths = get_feature_file_paths()
 	feature_names = get_feature_names()

@@ -1,7 +1,7 @@
 import trackingDataPb_pb2
 import pandas as pd
 
-from file_utils import panic_if_file_not_exists
+from file_utils import panic_if_path_not_exists
 
 def get_tracking_data_information(tracking_data):
 	video_metadata = tracking_data.videoMeta
@@ -39,7 +39,7 @@ def create_df_from_tracking_data(tracking_data):
 	return df
 
 def create_tracking_data_from_file(file_path):
-	panic_if_file_not_exists(file_path)
+	panic_if_path_not_exists(file_path)
 	tracking_data = trackingDataPb_pb2.trackingData()
 
 	# Load tracking data

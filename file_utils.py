@@ -14,9 +14,9 @@ def get_files(path, file_extension):
 def get_file_name_without_extension(file_path):
 	return pathlib.Path(file_path).stem
 
-def panic_if_file_not_exists(file_path):
+def panic_if_path_not_exists(file_path):
 	if not os.path.exists(file_path):
-		sys.exit(f"Expected file {file_path} to exist but it was not there...")
+		sys.exit(f"Expected path {file_path} to exist but it was not there...")
 
 def ensure_directory(directory_path):
 	if not os.path.exists(directory_path):
