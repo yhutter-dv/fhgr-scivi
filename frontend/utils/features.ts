@@ -4,6 +4,7 @@ type FeatureNameToPathsMapping = {
   featureName: string;
   gifs: string[];
   previewImages: string[];
+  videos: string[];
 };
 
 async function getFeatureNames(): Promise<string[]> {
@@ -24,19 +25,13 @@ async function getFeatureNamePaths(): Promise<string[]> {
   );
 }
 
-async function getGifPathsForFeatureName(
-  featureNamePath: string,
-): Promise<{ featureNamePath: string; gifPaths: string[] }> {
-  const gifNames = [];
-  const gifsPath = `${featureNamePath}/gifs`;
-  for await (const dirEntry of Deno.readDir(gifsPath)) {
-    gifNames.push(dirEntry.name);
+async function getFilesUnderPath(path: string) {
+  const fileNames = [];
+  for await (const dirEntry of Deno.readDir(path)) {
+    fileNames.push(dirEntry.name);
   }
-  const gifPaths = gifNames.map((f) => joinPath(gifsPath, f));
-  return {
-    featureNamePath,
-    gifPaths,
-  };
+  const filePaths = fileNames.map((f) => joinPath(path, f));
+  return filePaths;
 }
 
 function sanitizeFeatureName(featureName: string): string {
@@ -58,11 +53,18 @@ export async function sanitizedFeatureNamesToPathsMapping(): Promise<
   const featureNamesToGifPathsMapping: FeatureNameToPathsMapping[] = [];
   let index = 0;
   for await (const featureNamePath of featureNamePaths) {
-    const result = await getGifPathsForFeatureName(featureNamePath);
+    const gifPaths = await getFilesUnderPath(`${featureNamePath}/gifs`);
+    const previewImagePaths = await getFilesUnderPath(
+      `${featureNamePath}/preview_images`,
+    );
+    const videoPaths = await getFilesUnderPath(
+      `${featureNamePath}/video_overlays`,
+    );
     featureNamesToGifPathsMapping.push({
       featureName: sanitizedFeatureNames[index],
-      gifs: result.gifPaths,
-      previewImages: [],
+      gifs: gifPaths,
+      previewImages: previewImagePaths,
+      videos: videoPaths,
     });
     index += 1;
   }

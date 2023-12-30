@@ -4,9 +4,9 @@ import { sanitizedFeatureNamesToPathsMapping } from "../utils/features.ts";
 
 export default async function Gallery() {
 
-    const featureNamesToGifPaths = await sanitizedFeatureNamesToPathsMapping();
-    const galleryProps: GalleryElementProps[] = featureNamesToGifPaths.map(f => {
-        return { title: f.featureName, gifs: f.gifs };
+    const featureNamesToPathMapping = await sanitizedFeatureNamesToPathsMapping();
+    const galleryProps: GalleryElementProps[] = featureNamesToPathMapping.map(f => {
+        return { title: f.featureName, gifs: f.gifs, previewImages: f.previewImages, videos: f.videos };
     });
 
 
@@ -22,7 +22,7 @@ export default async function Gallery() {
                     </h3>
                 </div>
             </div>
-            {galleryProps.map(prop => <GalleryElement title={prop.title} gifs={prop.gifs} />)}
+            {galleryProps.map(prop => <GalleryElement title={prop.title} gifs={prop.gifs} previewImages={prop.previewImages} videos={prop.videos} />)}
         </>
     );
 }
