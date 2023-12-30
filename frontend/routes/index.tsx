@@ -1,6 +1,13 @@
 import { Home } from "../islands/Home.tsx";
+import { load } from "https://deno.land/std@0.210.0/dotenv/mod.ts";
+import { EnvConfig } from "../models/envConfig.ts";
 
-export default function Index() {
+export default async function Index() {
+  const env = await load();
+  const config: EnvConfig = {
+    apiUrl: env["API_URL"]
+  };
+
   return (
     <>
       <div class="px-4 py-8 mx-auto bg-slate-50">
@@ -9,7 +16,7 @@ export default function Index() {
           <h3 class="text-xl">A Tennis Move Recognizer powered by <a class="underline underline-offset-2 decoration-2 hover:text-sky-500 ease-in duration-150" href="https://en.wikipedia.org/wiki/Dynamic_time_warping" target="_blank">DTW</a></h3>
         </div>
       </div>
-      <Home />
+      <Home config={config} />
     </>
   );
 }

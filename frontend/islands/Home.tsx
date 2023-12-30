@@ -1,9 +1,12 @@
 import { FileUpload } from "../islands/FileUpload.tsx";
-import { Badge } from "../components/Badge.tsx";
-
 import { useSignal } from "@preact/signals";
+import { EnvConfig } from "../models/envConfig.ts";
 
-export function Home() {
+type Props = {
+    config: EnvConfig
+}
+
+export function Home({ config }: Props) {
     const selectedPbFile = useSignal<File | null>(null);
     const predictionResult = useSignal<string>("");
 
@@ -11,7 +14,7 @@ export function Home() {
 
         const formData = new FormData();
         formData.append("file", pbFile);
-        const response = await fetch('http://localhost:6969/predict_movement', {
+        const response = await fetch(`${config.apiUrl}/predict_movement`, {
             method: "POST",
             body: formData
         });
@@ -33,4 +36,4 @@ export function Home() {
             <h2 class="text-2xl font-bold my-4 text-center">{predictionResult}</h2>
         </>
     );
-}
+};

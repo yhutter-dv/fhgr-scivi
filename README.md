@@ -4,7 +4,8 @@ The purpose of this project is to provide a model that can distinguish between d
 ## Explanation about Python Scripts
 |Script|Purpose|
 |---|------|
-|create_gifs_and_overlays.py|Generates GIF Files from Matplotlib as well as Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
+|create_gifs.py|Generates GIF Files from Matplotlib|
+|create_overlays.py|Generats Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
 
 ## Jupyter Notebook
 In order to explore the data in more depth we have created a Jupyter Notebook in order to run it do the following commands:
@@ -34,7 +35,7 @@ Next a Browser Tab should open. Then you can select the Jupyter Notebook of your
 > Important: Please do not forget to select the installed `venv` as the kernel in order to utilize the installed virtual environment in the Jupyter Notebook.
 
 ## Frontend
-The Frontend is build with the awesome [Deno Fresh Framework](https://fresh.deno.dev/). Therefore in order for things to work please make sure you have [Deno] (https://docs.deno.com/runtime/manual/getting_started/installation) installed.
+The Frontend is build with the awesome [Deno Fresh Framework](https://fresh.deno.dev/). Therefore in order for things to work please make sure you have [Deno](https://docs.deno.com/runtime/manual/getting_started/installation) installed.
 
 After that to start up the frontend simply run:
 
