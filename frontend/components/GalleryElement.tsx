@@ -1,3 +1,5 @@
+import { relative } from "https://deno.land/std@0.210.0/path/mod.ts";
+
 export type GalleryElementProps = {
     title: string;
     gifs: string[];
@@ -6,7 +8,7 @@ export type GalleryElementProps = {
 };
 
 export function GalleryElement({ title, gifs, previewImages, videos }: GalleryElementProps) {
-    const pathRelativeToStaticDir = (path: string) => path.replace("./static/", "");
+    const pathRelativeToStaticDir = (path: string) => relative("static", path);
     const elements = previewImages.map((previewImage, index) => {
         return {
             previewImage: pathRelativeToStaticDir(previewImage),

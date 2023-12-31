@@ -1,3 +1,5 @@
+import { join } from "https://deno.land/std@0.210.0/path/mod.ts";
+
 const FEATURES_DIRECTORY_PATH = "./static/features/";
 
 type FeatureNameToPathsMapping = {
@@ -20,9 +22,7 @@ async function getSanitizedFeatureNames(): Promise<string[]> {
 }
 
 async function getFeatureNamePaths(): Promise<string[]> {
-  return (await getFeatureNames()).map((f) =>
-    joinPath(FEATURES_DIRECTORY_PATH, f)
-  );
+  return (await getFeatureNames()).map((f) => join(FEATURES_DIRECTORY_PATH, f));
 }
 
 async function getFilesUnderPath(path: string) {
@@ -30,19 +30,12 @@ async function getFilesUnderPath(path: string) {
   for await (const dirEntry of Deno.readDir(path)) {
     fileNames.push(dirEntry.name);
   }
-  const filePaths = fileNames.map((f) => joinPath(path, f));
+  const filePaths = fileNames.map((f) => join(path, f));
   return filePaths;
 }
 
 function sanitizeFeatureName(featureName: string): string {
   return featureName.replaceAll("_", " ");
-}
-
-function joinPath(a: string, b: string): string {
-  if (a.endsWith("/") == true) {
-    return `${a}${b}`;
-  }
-  return `${a}/${b}`;
 }
 
 export async function sanitizedFeatureNamesToPathsMapping(): Promise<
