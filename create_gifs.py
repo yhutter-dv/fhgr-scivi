@@ -15,6 +15,8 @@ TRACK_DATA_FOLDER_NAME = "track_data"
 TRACK_DATA_FILE_EXTENSION = "pb"
 VIEWPORT_WIDTH_RATIO = 16
 VIEWPORT_HEIGHT_RATIO = 9
+DISPLAY_AXIS = False
+DISPLAY_TITLE = False
 
 console = Console()
 
@@ -36,8 +38,12 @@ def create_gif(tracking_data, tracking_data_information, file_path):
 	ax.set_xlim([0, tracking_data_information["resolution_x"]])
 	ax.set_ylim([tracking_data_information["resolution_y"], 0])
 
-	# Set title
-	plt.title(file_path)
+	if not DISPLAY_AXIS:
+		ax.set_axis_off()
+
+	if DISPLAY_TITLE:
+		# Set title
+		plt.title(file_path)
 
 	# Create new scatter plot instance to pass into the update function
 	scatter = ax.scatter(0, 0)

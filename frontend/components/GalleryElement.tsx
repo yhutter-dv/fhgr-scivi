@@ -1,4 +1,5 @@
 import { relative } from "https://deno.land/std@0.210.0/path/mod.ts";
+import { Badge } from "./Badge.tsx";
 
 type Props = {
     title: string;
@@ -16,7 +17,7 @@ export function GalleryElement({ title, gifPath, previewImagePath, videoPath }: 
                 <a class="underline underline-offset-1 pr-2" href={pathRelativeToStaticDir(gifPath)} target="_blank">See Gif</a>
                 <a class="underline underline-offset-1" href={pathRelativeToStaticDir(videoPath)} target="_blank">See Video</a>
             </div>
-            <h2 class="text-lg text-center my-4 capitalize">{title}</h2>
+            <h2 class="text-lg text-center my-4 capitalize"><Badge text={title} /></h2>
             <img src={pathRelativeToStaticDir(previewImagePath)} />
         </div>
     );

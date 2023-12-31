@@ -1,11 +1,31 @@
 KEYPOINT_COLORS = [
-    '#F92672', '#66D9EF', '#A6E22E', '#FD971F', '#E6DB74', '#AE81FF',
-    '#66FF66', '#FF99CC', '#FFB366', '#99CCFF', '#66CCCC', '#FF6666',
-    '#6699FF', '#CC99FF', '#C6E2FF', '#FFCCCC', '#A8FF60', '#FFE666',
-    '#C6FFDD', '#E1F5C4', '#FF80AB', '#B19CD9', '#FF91AF', '#A8FF60'
+  "#f7fafc",
+  "#edf2f7",
+  "#e2e8f0",
+  "#cbd5e0",
+  "#a0aec0",
+  "#718096",
+  "#4a5568",
+  "#2d3748",
+  "#1a202c",
+  "#f8f0fc",
+  "#f3ebff",
+  "#e9d8fd",
+  "#d6bcfa",
+  "#b794f4",
+  "#9f7aea",
+  "#805ad5",
+  "#6b46c1",
+  "#553c9a",
+  "#e6fffa",
+  "#b2f5ea",
+  "#81e6d9",
+  "#4fd1c5",
+  "#38b2ac",
+  "#319795"
 ]
 
-CHART_BACKGROUND_COLOR = '#272822'
+CHART_BACKGROUND_COLOR = '#ffffff'
 
 def hex_to_rgb(hex_string):
     # Remove '#' if present

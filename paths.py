@@ -1,1 +1,1 @@
-FEATURES_DIRECTORY_PATH = "./data/features"
+FEATURES_DIRECTORY_PATH = "./frontend/static/features"

@@ -6,6 +6,7 @@ The purpose of this project is to provide a model that can distinguish between d
 |---|------|
 |create_gifs.py|Generates GIF Files from Matplotlib|
 |create_overlays.py|Generats Video Overlays where the individual keypoints are visible. In order for this to work please make sure that you have `ffmpeg` installed on your system.|
+|create_preview_images.py|Extracts the first keyframe from the created gifs and creates a preview image as a PNG File.|
 
 ## Jupyter Notebook
 In order to explore the data in more depth we have created a Jupyter Notebook in order to run it do the following commands:
@@ -44,6 +45,12 @@ cd frontend
 deno task start
 ```
 
+Please note that you can configure the Url for the API Endpoint in the `.env` file under the `frontend` directory.
+
+```bash
+API_URL=http://localhost:6969
+```
+
 ## Backend
 For the Frontend a simple Backend was implemented with [FastAPI](https://fastapi.tiangolo.com/). The Backend just has a single Endpoint. The purpose of this endpoint is to determine the correct Tennis Move given a `.pb` file which can be uploaded via the frontend.
 
@@ -55,6 +62,8 @@ python -m venv ./venv
 source venv/bin/activate.sh
 uvicorn app:app --port 6969 --reload
 ```
+
+> Please note that the Port you specify should match the one you have in the `.env` file under the `frontend` directory.
 
 ## Used Ressources
 |Ressource|Description|

@@ -14,13 +14,12 @@ export default async function Gallery() {
 
     return (
         <>
-            <div class="px-4 py-8 mx-auto bg-slate-50">
+            <div class="px-4 py-8 mx-auto bg-slate-50 text-center">
                 <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
                     <h2 class="text-2xl font-bold my-4">Gallery</h2>
                     <h3 class="text-xl">
-                        These Images have been generated with the help of the Script
-                        <Badge text="create_gifs_and_overlays.py" />
-                        Click on an image to open the corresponding GIF or Video file.
+                        The images have been generated with the help of the Script
+                        <code>create_preview_images.py</code>. The Gifs were generated with the Script <code>create_gifs.py</code> and the videos with <code>create_overlays.py</code>
                     </h3>
                 </div>
             </div>
