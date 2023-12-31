@@ -1,39 +1,23 @@
 import { relative } from "https://deno.land/std@0.210.0/path/mod.ts";
 
-export type GalleryElementProps = {
+type Props = {
     title: string;
-    gifs: string[];
-    previewImages: string[];
-    videos: string[];
+    gifPath: string;
+    previewImagePath: string;
+    videoPath: string;
 };
 
-export function GalleryElement({ title, gifs, previewImages, videos }: GalleryElementProps) {
+export function GalleryElement({ title, gifPath, previewImagePath, videoPath }: Props) {
     const pathRelativeToStaticDir = (path: string) => relative("static", path);
-    const elements = previewImages.map((previewImage, index) => {
-        return {
-            previewImage: pathRelativeToStaticDir(previewImage),
-            gif: pathRelativeToStaticDir(gifs[index]),
-            video: pathRelativeToStaticDir(videos[index])
-        }
-    });
 
     return (
-        <div class="mx-1">
-            <div class="text-2xl font-bold my-4 capitalize text-center">
-                {title}
+        <div class="rounded border flex flex-col p-2">
+            <div class="flex flex-row justify-end">
+                <a class="underline underline-offset-1 pr-2" href={pathRelativeToStaticDir(gifPath)} target="_blank">See Gif</a>
+                <a class="underline underline-offset-1" href={pathRelativeToStaticDir(videoPath)} target="_blank">See Video</a>
             </div>
-
-            <div class="grid grid-cols-3 grid-flow-row gap-4 mt-4">
-                {elements.map(e => (
-                    <div class="rounded border flex flex-col p-2">
-                        <div class="flex flex-row justify-end">
-                            <a class="underline underline-offset-1 pr-2" href={e.gif} target="_blank">See Gif</a>
-                            <a class="underline underline-offset-1" href={e.video} target="_blank">See Video</a>
-                        </div>
-                        <img src={e.previewImage} />
-                    </div>
-                ))}
-            </div>
+            <h2 class="text-lg text-center my-4 capitalize">{title}</h2>
+            <img src={pathRelativeToStaticDir(previewImagePath)} />
         </div>
     );
 }

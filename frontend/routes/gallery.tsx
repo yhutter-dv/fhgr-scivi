@@ -1,14 +1,16 @@
-import { GalleryElement, GalleryElementProps } from "../components/GalleryElement.tsx";
+import { GalleryElement } from "../components/GalleryElement.tsx";
 import { Badge } from "../components/Badge.tsx";
 import { sanitizedFeatureNamesToPathsMapping } from "../utils/features.ts";
-
+import { SEP } from "https://deno.land/std@0.210.0/path/mod.ts";
 export default async function Gallery() {
 
     const featureNamesToPathMapping = await sanitizedFeatureNamesToPathsMapping();
-    const galleryProps: GalleryElementProps[] = featureNamesToPathMapping.map(f => {
-        return { title: f.featureName, gifs: f.gifs, previewImages: f.previewImages, videos: f.videos };
-    });
-
+    const constructTitleFromPath = (path: string): string => {
+        const pathParts = path.split(SEP)
+        const lastPart = pathParts[pathParts.length - 1];
+        const title = lastPart.replace("_", " ");
+        return title;
+    };
 
     return (
         <>
@@ -22,7 +24,24 @@ export default async function Gallery() {
                     </h3>
                 </div>
             </div>
-            {galleryProps.map(prop => <GalleryElement title={prop.title} gifs={prop.gifs} previewImages={prop.previewImages} videos={prop.videos} />)}
+            <div class="mx-1">
+                {
+                    featureNamesToPathMapping.map(f => (
+                        <>
+                            <div class="text-2xl font-bold my-4 capitalize text-center">
+                                {f.featureName}
+                            </div>
+
+                            <div class="grid grid-cols-3 grid-flow-row gap-4 mt-4">
+                                {
+                                    f.previewImages.map((previewImage, index) =>
+                                        <GalleryElement title={constructTitleFromPath(previewImage)} previewImagePath={previewImage} gifPath={f.gifs[index]} videoPath={f.videos[index]} />)
+                                }
+                            </div>
+                        </>
+                    ))
+                }
+            </div>
         </>
     );
 }
