@@ -37,7 +37,6 @@ export function Home({ config }: Props) {
             return;
         }
         lastSelectedFileName = f.name;
-        console.log(lastSelectedFileName, f.name)
         hasSelectedFile.value = true;
         hasClassification.value = false;
         const prediction = await getPredicitonForPbFile(f);
