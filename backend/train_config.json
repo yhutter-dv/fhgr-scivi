@@ -1,0 +1,64 @@
+{
+	"config": [
+		{
+	        "file_path": "./data/features/forehand_flat/track_data/yhu_forehand_flat_01.pb",
+	        "is_left": false,
+	        "classification": "Forehand Flat Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/forehand_flat/track_data/yhu_forehand_flat_02.pb",
+	        "is_left": false,
+	        "classification": "Forehand Flat Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/forehand_flat/track_data/guemah_forehand_flat_01.pb",
+	        "is_left": true,
+	        "classification": "Forehand Flat Links"
+	    },
+	    {
+	        "file_path": "./data/features/forehand_flat/track_data/guemah_forehand_flat_02.pb",
+	        "is_left": true,
+	        "classification": "Forehand Flat Links"
+	    },
+	    {
+	        "file_path": "./data/features/backhand/track_data/yhu_backhand_01.pb",
+	        "is_left": false,
+	        "classification": "Backhand Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/backhand/track_data/yhu_backhand_02.pb",
+	        "is_left": false,
+	        "classification": "Backhand Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/backhand/track_data/guemah_backhand_01.pb",
+	        "is_left": true,
+	        "classification": "Backhand Links"
+	    },
+	    {
+	        "file_path": "./data/features/backhand/track_data/guemah_backhand_02.pb",
+	        "is_left": true,
+	        "classification": "Backhand Links"
+	    },
+	    {
+	        "file_path": "./data/features/service_flat/track_data/yhu_service_flat_01.pb",
+	        "is_left": false,
+	        "classification": "Service Flat Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/service_flat/track_data/yhu_service_flat_02.pb",
+	        "is_left": false,
+	        "classification": "Service Flat Rechts"
+	    },
+	    {
+	        "file_path": "./data/features/service_flat/track_data/guemah_service_flat_01.pb",
+	        "is_left": true,
+	        "classification": "Service Flat Links"
+	    },
+	    {
+	        "file_path": "./data/features/service_flat/track_data/guemah_service_flat_02.pb",
+	        "is_left": true,
+	        "classification": "Service Flat Links"
+	    }
+	]
+}

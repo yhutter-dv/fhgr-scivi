@@ -3,16 +3,17 @@ import { Signal } from "@preact/signals";
 
 type Props = {
     supportedFileType: string;
-    selectedFile: Signal<File | null>;
+    onFileSelected: (file: File) => void;
 };
 
 
-export function FileUpload({ supportedFileType, selectedFile }: Props) {
+export function FileUpload({ supportedFileType, onFileSelected }: Props) {
 
     function onFileChanged(event: Event) {
         const target = event.target as HTMLInputElement;
         if (target.files && target.files.length > 0) {
-            selectedFile.value = target.files[0];
+            const file = target.files[0];
+            onFileSelected(file);
         }
     }
 
