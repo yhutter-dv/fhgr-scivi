@@ -15,6 +15,8 @@ VIDEO_DATA_FOLDER_NAME = "videos"
 VIDEO_OVERLAY_FOLDER_NAME = "video_overlays"
 TRACK_DATA_FILE_EXTENSION = "pb"
 VIDEO_FILE_EXTENSION = "MOV"
+OUTPUT_VIDEO_FILE_EXTENSION = "webm"
+VIDEO_CODED = "VP80"
 
 console = Console()
 
@@ -30,7 +32,7 @@ def create_video_overlay(tracking_data, tracking_data_information, video_file_pa
 	res_x = tracking_data_information["resolution_x"]
 	res_y = tracking_data_information["resolution_y"]
 
-	out = cv2.VideoWriter(overlay_file_path, cv2.VideoWriter_fourcc(*'MP4V'), fps, (res_x,res_y))
+	out = cv2.VideoWriter(overlay_file_path, cv2.VideoWriter_fourcc(*VIDEO_CODED), fps, (res_x,res_y))
 
 	frame_number = 0
 	try:
@@ -101,7 +103,7 @@ if __name__ == "__main__":
 				track_data_file_name_without_extension = get_file_name_without_extension(track_data_file)
 				video_data_file_name_without_extension = get_file_name_without_extension(video_data_file)
 
-				video_overlay_name = f"{track_data_file_name_without_extension}.mp4"
+				video_overlay_name = f"{track_data_file_name_without_extension}.{OUTPUT_VIDEO_FILE_EXTENSION}"
 				video_overlay_full_path = os.path.join(video_overlay_folder_path, video_overlay_name)
 
 				found_match_video_file = track_data_file_name_without_extension == video_data_file_name_without_extension

@@ -34,9 +34,12 @@ def hex_to_rgb(hex_string):
 
     # Ensure the hex string is valid
     if len(hex_string) != 6:
-        raise ValueError("Invalid hex string length. It should be 6 characters long (excluding '#').")
+        print("Invalid hex string length. It should be 6 characters long (excluding '#').")
+        return (0, 0, 0)
 
     # Convert hex to RGB
     r = int(hex_string[0:2], 16)
     g = int(hex_string[2:4], 16)
     b = int(hex_string[4:6], 16)
+
+    return (r, g, b)

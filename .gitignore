@@ -1,6 +1,7 @@
 # Ignore all video files
 *.MOV
 *.mp4
+*.webm
 
 
 ### Python ###

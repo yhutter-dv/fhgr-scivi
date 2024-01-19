@@ -4,6 +4,7 @@ def get_last_part_of_path(path):
 import os
 import glob
 import pathlib
+import sys
 
 def get_subdirectories(path):
 	return [ f.path for f in os.scandir(path) if f.is_dir() ]

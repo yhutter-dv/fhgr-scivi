@@ -7,7 +7,7 @@ import os
 from features import get_feature_file_paths, get_feature_names
 from file_utils import ensure_directory, get_files, get_file_name_without_extension
 from tracking_data import create_tracking_data_from_file, get_tracking_data_information, create_df_from_tracking_data
-from color_utils import hex_to_rgb, KEYPOINT_COLORS, CHART_BACKGROUND_COLOR
+from color_utils import KEYPOINT_COLORS, CHART_BACKGROUND_COLOR
 
 # Global variables
 GIF_FOLDER_NAME = "gifs"
