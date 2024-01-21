@@ -18,8 +18,7 @@ export default async function Gallery() {
                 <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
                     <h2 class="text-2xl font-bold my-4">Gallery</h2>
                     <h3 class="text-xl">
-                        The images have been generated with the help of the Script
-                        <code>create_preview_images.py</code>. The Gifs were generated with the Script <code>create_gifs.py</code> and the videos with <code>create_overlays.py</code>
+                        The images have been generated with the help of the Script <code>create_preview_images.py</code>. The Gifs were generated with the Script <code>create_gifs.py</code> and the videos with <code>create_overlays.py</code>
                     </h3>
                 </div>
             </div>
