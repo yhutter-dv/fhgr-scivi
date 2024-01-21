@@ -30,6 +30,24 @@ source venv/bin/activate.sh
 pip install -r requirements.txt
 ```
 
+Please note that for running the Scripts to generate the Video Overlay it is
+expected that a `videos` folder is present under each feature inside the
+`frontend\static\features\` directory. It is also expected that the files have
+the `.MOV` extension. The video files were not put under version control because
+they are quite large.
+
+```bash
+├── backhand (feature 1)
+│   └── videos
+│       ├── guemah_backhand_01.MOV
+│       ├── guemah_backhand_02.MOV
+│       ├── guemah_backhand_03.MOV
+│       ├── yhu_backhand_01.MOV
+│       ├── yhu_backhand_02.MOV
+│       └── yhu_backhand_03.MOV
+...
+```
+
 ## Jupyter Notebook
 
 In order to explore the data in more depth we have created a Jupyter Notebook in
